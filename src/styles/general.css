@@ -1,0 +1,21 @@
+body {
+    font-family: Quicksand;
+    margin: 0;
+    position: relative; /* for absolute positioning context */
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  select {
+    cursor: pointer;
+  }
+  
+  input, select, button {
+    font-family: Quicksand, sans-serif;
+  }

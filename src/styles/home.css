@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  
+  .home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 100%; /* Full width */
+    text-align: center; /* Ensure text is centered */
+  }
+  
+  .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .name {
+    margin-left: 10px;
+    display: inline-block;
+  }
+  

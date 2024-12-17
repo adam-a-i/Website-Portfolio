@@ -35,7 +35,7 @@ export default function Particle() {
                 },
                 onHover: {
                   enable: true,
-                  mode: "repulse",
+                  mode: "grab",
                 },
                 resize: true,
               },

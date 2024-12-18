@@ -1,37 +1,56 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html, body {
-    height: 100%;
-  }
-  
-  .home {
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(247, 247, 247);
-    margin: 30px;
-    padding: 60px;
-  }
-  
-  .info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .hi {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .name {
-    margin-left: 10px;
-    display: inline-block;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.home {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;    /* Center vertically */
+  overflow: hidden;
+}
+
+.info {
+  position: relative;
+  z-index: 1; /* Ensure this is above the Particle background */
+  text-align: center;
+}
+
+.hi {
+  font-size: 50px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fcfcfc;
+}
+
+.name {
+  font-size: 30px;
+  margin-left: 10px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.wave {
+  font-size: 30px;
+  margin-left: 5px;
+}
+
+.into{
+  margin-right: 5px;
+}
+.typewriter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

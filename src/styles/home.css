@@ -54,3 +54,128 @@ html, body {
   justify-content: center;
   align-items: center;
 }
+
+.social-icons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.github:hover #arm {
+  transform-origin: bottom right;
+  animation: moveArm 1s infinite alternate;
+}
+
+@keyframes moveArm {
+  0% {
+      transform: rotate(10deg);
+  }
+  100% {
+      transform: rotate(-10deg);
+  }
+}
+
+.linkedin:hover .linkedin-icon-footer>rect {
+  animation: rect-up 0.3s linear infinite;
+}
+
+@keyframes rect-up {
+  50% {
+      y: 10px;
+      height: 11px;
+  }
+  0% {
+      y: 13px;
+      height: 8px;
+  }
+}
+
+.linkedin:hover .linkedin-icon-footer>circle {
+  animation: bounce 0.4s linear infinite;
+}
+
+@keyframes bounce {
+  75% {
+      cy: 8px;
+  }
+  50% {
+      cy: 4px
+  }
+  0% {
+      cy: 4px
+  }
+}
+
+/*Social icons*/
+.github-icon {
+  fill: #fff;
+}
+:root {
+  --link-size: 64px;
+  --trans-props: all 0.2s ease;
+  --link-size-footer-b: 40px;
+  --link-size-footer-s: 30px;
+}
+
+a.socialicon {
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons {
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+.socialicon{
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: var(--link-size);
+  height: var(--link-size);
+  background-color: #000000;
+  margin: 8px;
+  border-radius: 50%;
+  box-shadow: 2px 5px 5px var(--shadow-col);
+  text-decoration: none;
+  transition: var(--trans-props);
+}
+.socialicon i {
+  margin: auto;
+  font-size: 24px;
+  z-index: 1;
+  transition: var(--trans-props);
+}
+
+/* Social icon in dark mode */
+html[light-mode="dark"] .socialicon{
+  background-color: #141516;
+}
+
+.kaggle i {
+  margin: auto;
+  font-size: 24px;
+  z-index: 1;
+  transition: var(--trans-props);
+}
+
+.socialicon.kaggle{
+  color:var(--col-icon-kaggle);
+}
+
+.socialicon:after {
+  content: "";
+  width: var(--link-size);
+  height: var(--link-size);
+  position: absolute;
+  transform: translate(0, var(--link-size));
+  border-radius: 50%;
+  transition: var(--trans-props);
+  
+}
+
+.socialicon.kaggle:after {
+  background-color: #41aff3;
+  box-shadow: var(--kaggle);
+}

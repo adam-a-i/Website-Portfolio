@@ -23,14 +23,14 @@ const Home = () => {
           </div>
         </div>
         <div class="social-icons">
-        <a class="socialicon linkedin" title="linkedin" href="https://www.linkedin.com/in/fahd-seddik" target="_blank" rel="author">
+        <a class="socialicon linkedin" title="linkedin" href="https://www.linkedin.com/in/adam-ai/" target="_blank" rel="author">
             <svg class="linkedin-icon feather feather-linkedin" xmlns="http://www.w3.org/2000/svg" width="35" viewBox="0 0 24 24" fill="#0e76a8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                 <rect x="2" y="9" width="4" height="12"></rect>
                 <circle cx="4" cy="4" r="2"></circle>
             </svg>
         </a>
-        <a class="socialicon github" title="github" href="https://github.com/fahdseddik" target="_blank" rel="author">
+        <a class="socialicon github" title="github" href="https://github.com/adam-a-i" target="_blank" rel="author">
 
             <svg class="github-icon" width="45px" height="45px" viewBox="0 0 300 300">
 
@@ -44,12 +44,12 @@ const Home = () => {
             </svg>
         </a>
 
-        <a class="socialicon kaggle" title="kaggle" href="https://www.kaggle.com/fahdseddik" target="_blank" rel="author">
+        <a class="socialicon kaggle" title="kaggle" href="https://www.kaggle.com/adamibrahim12" target="_blank" rel="author">
             <p>k</p>
         </a>
 
         
-        <a class="socialicon kaggle" href="https://leetcode.com/MidniteRayZ/" target="_blank" rel="author">
+        <a class="socialicon kaggle" href="https://leetcode.com/u/adam_ibrahim/" target="_blank" rel="author">
             <i class="fab"><img id="leetcode-icon" src="https://iconape.com/wp-content/png_logo_vector/leetcode-logo-white-no-text.png" alt="lc" width="35" height="35"/></i>
         </a>
     </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Particle from './Particle';
 import Typewriter from 'typewriter-effect';
+import Button from './button';
 const Home = () => {
   return (
     <div className="home">
@@ -52,6 +53,13 @@ const Home = () => {
         <a class="socialicon kaggle" href="https://leetcode.com/u/adam_ibrahim/" target="_blank" rel="author">
             <i class="fab"><img id="leetcode-icon" src="https://iconape.com/wp-content/png_logo_vector/leetcode-logo-white-no-text.png" alt="lc" width="35" height="35"/></i>
         </a>
+    </div>
+    <div className="resume">
+    <Button onClick={() => {
+  console.log('Button clicked');
+  window.open('/assets/AdamCV.pdf', '_blank');
+}} />
+
     </div>
       </div>
     </div>

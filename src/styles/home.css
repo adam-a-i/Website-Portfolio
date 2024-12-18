@@ -9,12 +9,13 @@
   }
   
   .home {
+    border-radius: 20px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh; /* Full viewport height */
-    width: 100%; /* Full width */
-    text-align: center; /* Ensure text is centered */
+    background-color: rgb(247, 247, 247);
+    margin: 30px;
+    padding: 60px;
   }
   
   .info {

@@ -5,6 +5,7 @@ import Switch from './Switch';
 const Navbar = () => {
     return (
         <div className='navbar'>
+            <div className='signature'>Adam Ibrahim</div>
             <div className="links">
             <Link className="nav-link" to="/home">Home</Link>
             <Link className="nav-link" to="/education">Education</Link>

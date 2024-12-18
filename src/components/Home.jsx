@@ -13,15 +13,16 @@ const Home = () => {
             <Typewriter
               className='typewriter'
               options={{
-                strings: ['Full Stack Development', ' AI', 'Machine Learning', 'Web Development', 'Data Science'],
+                strings: ['Full Stack Development', ' AI', 'Machine Learning', 'Deep Learning','Open Source', 'Web Development'],
                 autoStart: true,
                 loop: true,
+                typeSpeed: 50, // Typing speed (lower value = faster)
+                deleteSpeed: 30, 
               }}
             />
           </div>
         </div>
-      </div>
-      <div class="social-icons">
+        <div class="social-icons">
         <a class="socialicon linkedin" title="linkedin" href="https://www.linkedin.com/in/fahd-seddik" target="_blank" rel="author">
             <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" width="35" viewBox="0 0 24 24" fill="#0e76a8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
@@ -42,19 +43,9 @@ const Home = () => {
                                             c6,5.1,10.8,11.5,13.8,18.8c2.9,7.4,7.7,24.1,41.5,17.8" />
             </svg>
         </a>
-    
-        <a class="socialicon codeforces" title="codeforces" href="https://codeforces.com/profile/MidniteRayZ" target="_blank" rel="author">
-            <svg class="codeforces-icon" xmlns="http://www.w3.org/2000/svg" viewBox="5 0 14 19" width="100" height="100">
-                <g>
-                    <rect class="red" x="15" width="2" height="6.5" rx="0.7" y="0" fill="#AE0F0A" />
-                    <rect class="blue" x="12" width="2" height="6.5" rx="0.7" y="0" fill="#4F81C1" />
-                    <rect class="yellow" x="9" width="2" height="6.5" rx="0.7" y="0" fill="#FFD400" />
-                </g>
-            </svg>
-        </a>
 
         <a class="socialicon kaggle" title="kaggle" href="https://www.kaggle.com/fahdseddik" target="_blank" rel="author">
-            <i class="fab fa-kaggle"></i>
+            <p>k</p>
         </a>
 
         
@@ -62,6 +53,7 @@ const Home = () => {
             <i class="fab"><img id="leetcode-icon" src="https://iconape.com/wp-content/png_logo_vector/leetcode-logo-white-no-text.png" alt="lc" width="35" height="35"/></i>
         </a>
     </div>
+      </div>
     </div>
   );
 };

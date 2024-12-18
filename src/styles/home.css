@@ -140,17 +140,14 @@ a.socialicon {
   box-shadow: 2px 5px 5px var(--shadow-col);
   text-decoration: none;
   transition: var(--trans-props);
+  justify-content: center; 
+  align-items: center;    
 }
 .socialicon i {
   margin: auto;
   font-size: 24px;
   z-index: 1;
   transition: var(--trans-props);
-}
-
-/* Social icon in dark mode */
-html[light-mode="dark"] .socialicon{
-  background-color: #141516;
 }
 
 .kaggle i {
@@ -175,7 +172,9 @@ html[light-mode="dark"] .socialicon{
   
 }
 
-.socialicon.kaggle:after {
+.socialicon.kaggle:hover {
   background-color: #41aff3;
   box-shadow: var(--kaggle);
 }
+
+

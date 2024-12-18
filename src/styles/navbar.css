@@ -6,7 +6,7 @@
     background-color: rgb(44, 44, 44);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     height: 80px;
     z-index: 10; 
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
@@ -51,3 +51,20 @@
     align-items: center;
     gap: 15px; 
 }
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../assets/Agustina.woff') format('woff'); /* Correct path */
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  
+  .signature {
+    font-family: 'CustomFont', Arial, sans-serif; /* Fallback to Arial if the font fails */
+    font-size: 30px; /* Adjust font size */
+    color: #9b9797; /* Customize text color */
+    text-align: center; /* Center align the text */
+    left: 0;
+    margin-left: 10px;
+  }
+  

@@ -27,14 +27,21 @@
     transition: color 0.3s, text-decoration-color 0.3s;
     text-underline-offset: 7px;
 }
-
+.nav-link-active {
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: purple;
+    text-decoration-skip-ink: none;
+}
 .nav-link:hover {
+    text-decoration-thickness: 2px;
     color: rgb(255, 255, 255);
     text-decoration: underline;
     text-decoration-color: purple;
     text-decoration-skip-ink: none;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     .navbar {
         height: 50px;
     }
@@ -67,4 +74,21 @@
     left: 0;
     margin-left: 10px;
   }
-  
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    margin-right: 10px;
+}
+  @media screen and (max-width: 860px) {
+    .hamburger {
+        display: block;
+    }
+    .links{
+        display: none;
+    }
+    .navbar{
+        height: 80px;
+    }
+    }  

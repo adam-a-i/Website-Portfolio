@@ -75,21 +75,40 @@ html, body {
   }
 }
 
-.linkedin:hover .linkedin-icon circle{
-  animation: bounce 0.5s linear infinite;
+.linkedin:hover .linkedin-icon rect {
+  animation: rect-up 0.3s linear infinite;
+}
+
+@keyframes rect-up {
+  50% {
+      y: 10px;
+      height: 11px;
+  }
+  0% {
+      y: 13px;
+      height: 8px;
+  }
+}
+
+.linkedin:hover .linkedin-icon circle {
+  animation: bounce 0.4s linear infinite;
 }
 
 @keyframes bounce {
-  75% {
-    transform: translateY(-4px);
+  0% {
+    cy: 4px;
   }
   50% {
-    transform: translateY(-8px);
+    cy: 4px;
   }
-  0% {
-    transform: translateY(0);
+  75% {
+    cy: 8px;
+  }
+  100% {
+    cy: 4px;
   }
 }
+
 
 
 /*Social icons*/

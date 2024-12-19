@@ -6,44 +6,44 @@ import Hamburger from './Hamburger';
 const Navbar = () => {
     const [page, setPage] = useState('home');
     const [dropdown, setDropdown] = useState(false);
-    const [isMobile, setIsMobile] = useState(false); // New state to track screen size
+    const [isMobile, setIsMobile] = useState(false); 
 
     const handleToggle = () => {
-        setDropdown(prev => !prev); // Toggle the dropdown state
+        setDropdown(prev => !prev);
     };
 
     const handleResize = () => {
-        // Set isMobile based on window width
         if (window.innerWidth <= 860) {
-            setIsMobile(true);
+            setIsMobile(true); 
         } else {
+            setDropdown(false); 
             setIsMobile(false);
         }
     };
 
     useEffect(() => {
-        // Initial check when the component is mounted
         handleResize();
 
-        // Add event listener for window resize
         window.addEventListener('resize', handleResize);
 
-        // Clean up event listener on component unmount
-        return () => window.removeEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize); 
     }, []);
 
     return (
         <div className={isMobile ? (dropdown ? 'navbar-long' : 'navbar') : 'navbar'}>
-            <div className='signature'>Adam Ibrahim</div>
+            {!dropdown && <div className='signature'>Adam Ibrahim</div>}
 
-            {/* Hamburger is only shown on mobile */}
             {isMobile && (
+                <div className="navbar">
+                <div className='signature'>Adam Ibrahim</div>
                 <div className="hamburger">
                     <Hamburger onToggle={handleToggle} />
+
+                </div>
                 </div>
             )}
 
-            <div className={dropdown ? "links-long" : "links"}>
+            <div className={dropdown ? 'links-long' : 'links'}>
                 <Link
                     className={page === 'home' ? 'nav-link nav-link-active' : 'nav-link'}
                     to="/"

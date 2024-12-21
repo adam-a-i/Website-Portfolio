@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Switch from './Switch';
 import Hamburger from './Hamburger';
-
+import '../styles/navbar.css';
 const Navbar = () => {
     const [dropdown, setDropdown] = useState(false);
     const [isMobile, setIsMobile] = useState(false); 

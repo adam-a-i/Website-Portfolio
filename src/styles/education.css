@@ -1,18 +1,16 @@
-body {
-    background: #151616;
-    font-family: "Montserrat", sans-serif;
-    font-size: 16px;
-    color: rgb(53, 53, 53);
-  }
   .education{
-    margin-left: 200px;
+    margin-top: 5rem;
+    border: dashed red 1px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 200px;
+    padding: 2rem;
+    box-sizing: border-box;
     flex-direction: column;
   }
   .edu-title{
+    margin-bottom: 2rem;
     font-size: 20px;
     color: white;
     font-weight: bolder;
@@ -24,7 +22,7 @@ body {
   font-weight: bold; /* Optional, to make it stand out */
   }
   .edu{
-    margin-top: 70px;
+    max-width: 1200px;
   }
   .title {
     font-size: 15em;

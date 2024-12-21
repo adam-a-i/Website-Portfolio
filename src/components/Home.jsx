@@ -1,4 +1,6 @@
 import React from 'react';
+import '../styles/home.css';
+import '../styles/components.css';
 import Particle from './Particle';
 import Typewriter from 'typewriter-effect';
 import Button from './button';

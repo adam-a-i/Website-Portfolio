@@ -1,31 +1,24 @@
 body {
-    font-family: Quicksand;
-    margin: 0;
-    position: relative; /* for absolute positioning context */
-  }
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #151616;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(53, 53, 53);
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto; /* Enable scrolling */
+}
+
   p {
     margin: 0;
   }
   * {
     box-sizing: border-box;
-  }
-  button {
-    cursor: pointer;
-  }
-  
-  select {
-    cursor: pointer;
+
   }
   
   input, select, button {
     font-family: Quicksand, sans-serif;
   }
-  /* For the entire page */
-body {
-  overflow-x: hidden;
-}
-
-/* For a specific container */
-.container {
-  overflow-x: hidden;
-}

@@ -14,7 +14,7 @@ const TimelineElements = [
       title: "Al Sanawbar Private School",
       location: "United Arab Emirates, Abu Dhabi",
       description:
-        "Completed high school with distinction, excelling in both academics and extracurricular activities. Actively participated in student leadership roles and STEM-related initiatives, demonstrating a strong foundation for higher education.",
+        "Completed high school with distinction. Actively participated in student leadership roles and STEM-related initiatives, demonstrating a strong foundation for higher education.",
       gpa: " - GPA: 4.0/4.0",
       SAT: " - SAT: 1480/1600",
       Achievements: "Achievements: ",

@@ -23,17 +23,17 @@ const Home = () => {
             />
           </div>
         </div>
-        <div class="social-icons">
-        <a class="socialicon linkedin" title="linkedin" href="https://www.linkedin.com/in/adam-ai/" target="_blank" rel="author">
-            <svg class="linkedin-icon feather feather-linkedin" xmlns="http://www.w3.org/2000/svg" width="35" viewBox="0 0 24 24" fill="#0e76a8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+        <div className="social-icons">
+        <a className="socialicon linkedin" title="linkedin" href="https://www.linkedin.com/in/adam-ai/" target="_blank" rel="author">
+            <svg class="linkedin-icon feather feather-linkedin" xmlns="http://www.w3.org/2000/svg" width="35" viewBox="0 0 24 24" fill="#0e76a8" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                 <rect x="2" y="9" width="4" height="12"></rect>
                 <circle cx="4" cy="4" r="2"></circle>
             </svg>
         </a>
-        <a class="socialicon github" title="github" href="https://github.com/adam-a-i" target="_blank" rel="author">
+        <a className="socialicon github" title="github" href="https://github.com/adam-a-i" target="_blank" rel="author">
 
-            <svg class="github-icon" width="45px" height="45px" viewBox="0 0 300 300">
+            <svg className="github-icon" width="45px" height="45px" viewBox="0 0 300 300">
 
                 <path id="body" d="M112.5,234.4v43.1c24.5,7.5,50.5,7.5,75,0V225c-0.4-11.1-4.9-21.6-12.7-29.6c30-3.4,59.5-23.5,59.5-64.1
                                             c0.9-13.9-3.3-27.7-11.8-38.7c4.1-11.6,3.7-24.4-1.3-35.7c0,0-11.2-3.7-37.5,13.8c-22.1-6.1-45.3-6.1-67.4,0
@@ -45,13 +45,13 @@ const Home = () => {
             </svg>
         </a>
 
-        <a class="socialicon kaggle" title="kaggle" href="https://www.kaggle.com/adamibrahim12" target="_blank" rel="author">
+        <a className="socialicon kaggle" title="kaggle" href="https://www.kaggle.com/adamibrahim12" target="_blank" rel="author">
             <p>k</p>
         </a>
 
         
-        <a class="socialicon kaggle" href="https://leetcode.com/u/adam_ibrahim/" target="_blank" rel="author">
-            <i class="fab"><img id="leetcode-icon" src="https://iconape.com/wp-content/png_logo_vector/leetcode-logo-white-no-text.png" alt="lc" width="35" height="35"/></i>
+        <a className="socialicon kaggle" href="https://leetcode.com/u/adam_ibrahim/" target="_blank" rel="author">
+            <i className="fab"><img id="leetcode-icon" src="https://iconape.com/wp-content/png_logo_vector/leetcode-logo-white-no-text.png" alt="lc" width="35" height="35"/></i>
         </a>
     </div>
     <div className="resume">

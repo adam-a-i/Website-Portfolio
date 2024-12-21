@@ -17,7 +17,7 @@ const Home = () => {
                 strings: ['Full Stack Development', ' AI', 'Machine Learning', 'Deep Learning','Open Source', 'Web Development'],
                 autoStart: true,
                 loop: true,
-                typeSpeed: 5, // Typing speed (lower value = faster)
+                typeSpeed: 150, // Typing speed (lower value = faster)
                 deleteSpeed: 10, 
               }}
             />

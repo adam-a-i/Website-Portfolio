@@ -18,3 +18,8 @@ body {
   input, select, button {
     font-family: Quicksand, sans-serif;
   }
+  .container {
+    overflow: auto; /* or scroll */
+    height: auto; /* Avoid fixed heights unless necessary */
+  }
+  

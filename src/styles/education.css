@@ -1,6 +1,5 @@
   .education{
     margin-top: 5rem;
-    border: dashed red 1px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -11,7 +10,7 @@
   }
   .edu-title{
     margin-bottom: 2rem;
-    font-size: 20px;
+    font-size: 50px;
     color: white;
     font-weight: bolder;
   }
@@ -24,8 +23,17 @@
   .edu{
     max-width: 1200px;
   }
+  .vertical-timeline-element-title{
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  .vertical-timeline-element-subtitle{
+    font-size: 15px;
+    font-weight: bold;
+    color: grey;
+  }
   .title {
-    font-size: 15em;
+    font-size: 15px;
     text-align: center;
     font-family: "Bebas Neue", sans-serif;
   }
@@ -37,7 +45,6 @@
   .vertical-timeline-element-content {
     box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
       0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
-    padding: 2em 3em !important;
   }
   
   .date {
@@ -79,4 +86,12 @@
       color: rgb(44, 44, 44);
       margin-top: 1.5em;
     }
+  }
+
+
+  @media screen and (max-width: 490px) {
+    .edu-title{
+        font-size: 30px;
+    }
+    
   }

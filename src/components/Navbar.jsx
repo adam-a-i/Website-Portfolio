@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Switch from './Switch';
 import Hamburger from './Hamburger';
 
 const Navbar = () => {
-    const [page, setPage] = useState('home');
     const [dropdown, setDropdown] = useState(false);
     const [isMobile, setIsMobile] = useState(false); 
+
+    const location = useLocation();
+    const currentPage = location.pathname === '/education' ? 'education' :
+                        location.pathname === '/experience' ? 'experience' :
+                        location.pathname === '/projects' ? 'projects' :
+                        location.pathname === '/skills' ? 'skills' : 'home';
 
     const handleToggle = () => {
         setDropdown(prev => !prev);
@@ -35,47 +40,41 @@ const Navbar = () => {
 
             {isMobile && (
                 <div className="navbar">
-                <div className='signature'>Adam Ibrahim</div>
-                <div className="hamburger">
-                    <Hamburger onToggle={handleToggle} />
-
-                </div>
+                    <div className='signature'>Adam Ibrahim</div>
+                    <div className="hamburger">
+                        <Hamburger onToggle={handleToggle} />
+                    </div>
                 </div>
             )}
 
             <div className={dropdown ? 'links-long' : 'links'}>
                 <Link
-                    className={page === 'home' ? 'nav-link nav-link-active' : 'nav-link'}
+                    className={currentPage === 'home' ? 'nav-link nav-link-active' : 'nav-link'}
                     to="/"
-                    onClick={() => setPage('home')}
                 >
                     Home
                 </Link>
                 <Link
-                    className={page === 'education' ? 'nav-link nav-link-active' : 'nav-link'}
+                    className={currentPage === 'education' ? 'nav-link nav-link-active' : 'nav-link'}
                     to="/education"
-                    onClick={() => setPage('education')}
                 >
                     Education
                 </Link>
                 <Link
-                    className={page === 'experience' ? 'nav-link nav-link-active' : 'nav-link'}
+                    className={currentPage === 'experience' ? 'nav-link nav-link-active' : 'nav-link'}
                     to="/experience"
-                    onClick={() => setPage('experience')}
                 >
                     Experience
                 </Link>
                 <Link
-                    className={page === 'projects' ? 'nav-link nav-link-active' : 'nav-link'}
+                    className={currentPage === 'projects' ? 'nav-link nav-link-active' : 'nav-link'}
                     to="/projects"
-                    onClick={() => setPage('projects')}
                 >
                     Projects
                 </Link>
                 <Link
-                    className={page === 'skills' ? 'nav-link nav-link-active' : 'nav-link'}
+                    className={currentPage === 'skills' ? 'nav-link nav-link-active' : 'nav-link'}
                     to="/skills"
-                    onClick={() => setPage('skills')}
                 >
                     Skills
                 </Link>

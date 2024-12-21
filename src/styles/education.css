@@ -16,6 +16,15 @@ body {
     color: white;
     font-weight: bolder;
   }
+  .gradient{
+    background: linear-gradient(45deg, purple, rgb(152, 141, 155));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold; /* Optional, to make it stand out */
+  }
+  .edu{
+    margin-top: 70px;
+  }
   .title {
     font-size: 15em;
     text-align: center;
@@ -33,7 +42,8 @@ body {
   }
   
   .date {
-    color: rgb(57, 104, 107);
+    color: rgb(184, 14, 226) !important;
+    font-weight: bold !important;
   }
   
   #description {

@@ -13,7 +13,7 @@ const Education = () => {
   return (
     <div className="education">
       <div className="edu">
-        <p className='edu-title'>FORMAL <span className='gradient'>Education</span></p>
+        <p className='edu-title'>FORMAL <span className='gradient'>EDUCATION</span></p>
       </div>
       <VerticalTimeline>
         {TimelineElements.map((element) => {

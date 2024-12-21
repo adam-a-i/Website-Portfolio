@@ -6,7 +6,9 @@ body {
   p {
     margin: 0;
   }
-  
+  * {
+    box-sizing: border-box;
+  }
   button {
     cursor: pointer;
   }
@@ -18,8 +20,12 @@ body {
   input, select, button {
     font-family: Quicksand, sans-serif;
   }
-  .container {
-    overflow: auto; /* or scroll */
-    height: auto; /* Avoid fixed heights unless necessary */
-  }
-  
+  /* For the entire page */
+body {
+  overflow-x: hidden;
+}
+
+/* For a specific container */
+.container {
+  overflow-x: hidden;
+}

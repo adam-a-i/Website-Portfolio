@@ -1,64 +1,27 @@
 const TimelineElements = [
     {
-      id: 1,
-      title: "Frontend Developer",
-      location: "Dragontail, Ascana",
-      description:
-        "Converting data to a graphical interface, through the use of HTML, CSS, and JavaScript, so that users can view and interact with that data.",
-      buttonText: "View Frontend Projects",
-      date: "August 2016 - present",
-      icon: "work",
-    },
-    {
-      id: 2,
-      title: "Backend Developer",
-      location: "Skystead, Craonia",
-      description:
-        "Working hand-in-hand with front-end developers by providing the outward facing web application elements server-side logic. Creating the logic to make the web app function properly, and accomplishing this through the use of server-side scripting languages.",
-      buttonText: "View Backend Projects",
-      date: "June 2013 - August 2016",
-      icon: "work",
-    },
-    {
-      id: 3,
-      title: "Quality Assurance Engineer",
-      location: "South Warren, Geshington",
-      description:
-        "Assessing the quality of specifications and technical design documents in order to ensure timely, relevant and meaningful feedback.",
-      buttonText: "Company Website",
-      date: "September 2011 - June 2013",
-      icon: "work",
-    },
-    {
       id: 4,
-      title: "Oak Ridge College",
-      location: "South Warren, Geshington",
+      title: "United Arab Emirates University",
+      location: "United Arab Emirates, Abu Dhabi",
       description:
-        "Online Course in Magical Beasts and Wonders of the World - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque sagittis tellus, non ultrices lacus tempus vel.",
-      buttonText: "Course Certificate",
-      date: "September 2011",
+        "Bachelor of Science in Computer Science ",
+      gpa: " - GPA: 4.0/4.0",
+      date: "2023 - 2027(Expected)",
       icon: "school",
     },
     {
       id: 5,
-      title: "Hawking College",
-      location: "Skystead, Craonia",
+      title: "Al Sanawbar Private School",
+      location: "United Arab Emirates, Abu Dhabi",
       description:
-        "College - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque sagittis tellus, non ultrices lacus tempus vel.",
-      buttonText: "College Projects",
-      date: "2007 - 2011",
+        "Completed high school with distinction, excelling in both academics and extracurricular activities. Actively participated in student leadership roles and STEM-related initiatives, demonstrating a strong foundation for higher education.",
+      gpa: " - GPA: 4.0/4.0",
+      SAT: " - SAT: 1480/1600",
+      Achievements: "Achievements: ",
+      EmSAT: " - EmSAT English & 1925/2000 & EmSAT Math : 1700/2000",
+      date: "2019 - 2023",
       icon: "school",
-    },
-    {
-      id: 6,
-      title: "Marble Hills Grammar School",
-      location: "Dragontail, Ascana",
-      description:
-        "Highschool - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque sagittis tellus, non ultrices lacus tempus vel.",
-      date: "2003 - 2007",
-      icon: "school",
-    },
-    ];
+    }
+  ];
   
   export default TimelineElements;
-  

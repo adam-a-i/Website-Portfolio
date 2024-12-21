@@ -1,10 +1,21 @@
 body {
-    background: #121213;
+    background: #151616;
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
-    color: rgb(24, 24, 24);
+    color: rgb(53, 53, 53);
   }
-  
+  .education{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    flex-direction: column;
+  }
+  .edu-title{
+    font-size: 20px;
+    color: white;
+    font-weight: bolder;
+  }
   .title {
     font-size: 15em;
     text-align: center;
@@ -22,7 +33,7 @@ body {
   }
   
   .date {
-    color: rgb(201, 251, 255);
+    color: rgb(57, 104, 107);
   }
   
   #description {

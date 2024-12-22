@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Education from './components/Education';
 import AnimatedCursor from "react-animated-cursor";
+import Experience from "./components/Experience";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
         <Navbar/>
         <Routes>
           <Route path="/" element={<Home/>} /> 
-          <Route path="/education" element={<Education/>} /> 
+          <Route path="/education" element={<Education/>} />
+           <Route path="/experience" element={<Experience/>} />
         </Routes>
       </div>
       {!isMobile && (

@@ -3,9 +3,11 @@ import { Link, useLocation } from 'react-router-dom';
 import Switch from './Switch';
 import Hamburger from './Hamburger';
 import '../styles/navbar.css';
+
 const Navbar = () => {
     const [dropdown, setDropdown] = useState(false);
-    const [isMobile, setIsMobile] = useState(false); 
+    const [isMobile, setIsMobile] = useState(false);
+    const [navbarKey, setNavbarKey] = useState(0); // Key for reloading Navbar
 
     const location = useLocation();
     const currentPage = location.pathname === '/education' ? 'education' :
@@ -19,9 +21,9 @@ const Navbar = () => {
 
     const handleResize = () => {
         if (window.innerWidth <= 860) {
-            setIsMobile(true); 
+            setIsMobile(true);
         } else {
-            setDropdown(false); 
+            setDropdown(false);
             setIsMobile(false);
         }
     };
@@ -31,11 +33,16 @@ const Navbar = () => {
 
         window.addEventListener('resize', handleResize);
 
-        return () => window.removeEventListener('resize', handleResize); 
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
+    const handleLinkClick = () => {
+        setDropdown(false);
+        setNavbarKey(prev => prev + 1); // Increment key to reload Navbar
+    };
+
     return (
-        <div className={isMobile ? (dropdown ? 'navbar-long' : 'navbar') : 'navbar'}>
+        <div key={navbarKey} className={isMobile ? (dropdown ? 'navbar-long' : 'navbar') : 'navbar'}>
             {!dropdown && <div className='signature'>Adam Ibrahim</div>}
 
             {isMobile && (
@@ -49,30 +56,35 @@ const Navbar = () => {
 
             <div className={dropdown ? 'links-long' : 'links'}>
                 <Link
+                    onClick={handleLinkClick}
                     className={currentPage === 'home' ? 'nav-link nav-link-active' : 'nav-link'}
                     to="/"
                 >
                     Home
                 </Link>
                 <Link
+                    onClick={handleLinkClick}
                     className={currentPage === 'education' ? 'nav-link nav-link-active' : 'nav-link'}
                     to="/education"
                 >
                     Education
                 </Link>
                 <Link
+                    onClick={handleLinkClick}
                     className={currentPage === 'experience' ? 'nav-link nav-link-active' : 'nav-link'}
                     to="/experience"
                 >
                     Experience
                 </Link>
                 <Link
+                    onClick={handleLinkClick}
                     className={currentPage === 'projects' ? 'nav-link nav-link-active' : 'nav-link'}
                     to="/projects"
                 >
                     Projects
                 </Link>
                 <Link
+                    onClick={handleLinkClick}
                     className={currentPage === 'skills' ? 'nav-link nav-link-active' : 'nav-link'}
                     to="/skills"
                 >

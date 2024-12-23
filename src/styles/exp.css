@@ -1,0 +1,75 @@
+.experience{
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  background-color: #1d1f20; /* Matches dark theme */
+  color: white;
+  border-radius: 12px; /* Rounded corners */
+  padding: 0; /* Remove padding for edge-to-edge image */
+  margin-bottom: 30px;
+  width: 90%; /* Adjust to fit screen width */
+  max-width: 1300px; /* Optional for responsiveness */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Adds shadow for raised look */
+  overflow: hidden; /* Ensures content stays inside card bounds */
+  height: 300px; /* Set a fixed height for the card */
+}
+
+.picture {
+  flex: 1; /* Takes up one-third of the card width */
+  height: 100%; /* Matches the full height of the card */
+}
+
+.work-logo {
+  width: 100%; /* Full width of the left side */
+  height: 100%; /* Full height of the left side */
+  object-fit: cover; /* Ensures the image fills the space */
+}
+
+.workInfo {
+  flex: 2; /* Remaining space for text */
+  padding: 20px; /* Add padding for text content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center text vertically */
+  color: white;
+}
+
+.position {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.company {
+  font-size: 20px;
+  font-weight: bold;
+  color: #b3b3b3;
+  margin: 5px 0;
+}
+
+.timeFrame {
+  font-size: 14px;
+  color: #6c757d;
+  margin: 5px 0;
+}
+
+.tasks {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 10px 0;
+}
+
+.skills {
+  font-size: 14px;
+  color: #8e8e8e;
+  margin-top: 10px;
+}

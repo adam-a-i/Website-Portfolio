@@ -11,14 +11,36 @@ body {
   overflow-y: auto; /* Enable scrolling */
 }
 
-  p {
-    margin: 0;
-  }
-  * {
-    box-sizing: border-box;
+p {
+  margin: 0;
+}
 
-  }
-  
-  input, select, button {
-    font-family: Quicksand, sans-serif;
-  }
+* {
+  box-sizing: border-box;
+}
+
+input, select, button {
+  font-family: Quicksand, sans-serif;
+}
+
+/* Custom scrollbar for WebKit browsers */
+body::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #2e2e2e; /* Background of the scrollbar track */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: purple; /* Color of the scrollbar thumb */
+  border-radius: 5px; /* Rounded corners for the scrollbar thumb */
+  border: 2px solid #2e2e2e; /* Optional: adds padding around thumb */
+}
+
+/* Scrollbar styling for Firefox */
+body {
+  scrollbar-width: thin; /* Makes scrollbar thinner */
+  scrollbar-color: purple #2e2e2e; /* Thumb color and track color */
+}
+ 

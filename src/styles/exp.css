@@ -86,3 +86,38 @@
   color: #8e8e8e;
   margin-top: 10px;
 }
+
+@media screen and (max-width: 900px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .picture {
+    height: 200px;
+  }
+
+  .workInfo {
+    padding: 10px;
+  }
+
+  .position {
+    font-size: 20px;
+  }
+
+  .company {
+    font-size: 16px;
+  }
+
+  .timeFrame {
+    font-size: 12px;
+  }
+
+  .tasks {
+    font-size: 14px;
+  }
+
+  .skills {
+    font-size: 12px;
+  }
+  
+}

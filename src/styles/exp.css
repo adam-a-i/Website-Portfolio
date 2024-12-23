@@ -15,7 +15,7 @@
   color: white;
   border-radius: 12px;
   padding: 0;
-  margin-bottom: 30px;
+  margin-bottom: 100px;
   width: 90%;
   max-width: 1300px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
@@ -120,4 +120,19 @@
     font-size: 12px;
   }
   
+}
+
+.card, .edu-title {
+  position: relative;
+  animation: slideInTop 1s ease-out forwards;
+}
+@keyframes slideInTop {
+  from {
+    top: -100px;  
+    opacity: 0;   
+  }
+  to {
+    top: 0;      
+    opacity: 1;   
+  }
 }

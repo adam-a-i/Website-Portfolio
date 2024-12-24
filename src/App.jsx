@@ -6,7 +6,7 @@ import Education from './components/Education';
 import AnimatedCursor from "react-animated-cursor";
 import Experience from "./components/Experience";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
+import Projects from "./components/Projects";
 function App() {
   const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(
     navigator.userAgent
@@ -20,6 +20,7 @@ function App() {
           <Route path="/" element={<Home/>} /> 
           <Route path="/education" element={<Education/>} />
            <Route path="/experience" element={<Experience/>} />
+           <Route path="/projects" element={<Projects/>}/>
         </Routes>
       </div>
       {!isMobile && (

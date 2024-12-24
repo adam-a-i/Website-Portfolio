@@ -18,7 +18,7 @@ const TimelineElements = [
       gpa: " - GPA: 3.99/4.0",
       SAT: " - SAT: 1480/1600",
       Achievements: "Achievements: ",
-      EmSAT: " - EmSAT English & 1925/2000 & EmSAT Math : 1700/2000",
+      EmSAT: " - EmSAT English: 1925/2000 & EmSAT Math : 1700/2000",
       date: "2019 - 2023",
       icon: "school",
     }

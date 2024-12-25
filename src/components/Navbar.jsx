@@ -90,9 +90,6 @@ const Navbar = () => {
                 >
                     Skills
                 </Link>
-                <div className="switch">
-                    <Switch />
-                </div>
             </div>
         </div>
     );

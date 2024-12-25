@@ -48,7 +48,7 @@ const Home = () => {
         </a>
 
         <a className="socialicon kaggle" title="kaggle" href="https://www.kaggle.com/adamibrahim12" target="_blank" rel="author">
-            <p>k</p>
+            <p className='kaggleT'>k</p>
         </a>
 
         

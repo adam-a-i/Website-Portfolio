@@ -9,7 +9,7 @@ const Projects = () => {
         {projectData.map((project) => (
           <div
             key={project.id}
-            className="card"
+            className="card-pj"
             style={{ backgroundImage: `url(${project.image})` }}
           >
             <div className="overlay">

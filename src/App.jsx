@@ -8,6 +8,9 @@ import Experience from "./components/Experience";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
+
+
+
 function App() {
   const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(
     navigator.userAgent

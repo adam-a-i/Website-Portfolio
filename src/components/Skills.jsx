@@ -86,7 +86,10 @@ export default function Skills() {
     <FadeInSection>
       <div className="mt-20 w-full flex justify-center items-center p-8 box-border flex-col">
         <section id="skills" className="mb-6 w-full">
-        <p className='edu-title'> My  <span className='gradient'>Skills </span></p>
+        <p className="edu-title mx-auto text-center">
+            My <span className="gradient">Skills</span>
+          </p>
+
           <motion.div
             className="grid grid-cols-2 md:grid-cols-4 gap-4"
             variants={{

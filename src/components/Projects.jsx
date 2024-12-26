@@ -1,17 +1,44 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "../styles/projects.css";
 import projectData from "./projectData";
 
 const Projects = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
-    <div className="projects">
-      <p className='edu-title'>My <span className='gradient'>Projects</span></p>
-      <div className="cards-projects">
+    <motion.div
+      className="projects"
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
+      <p className="edu-title">
+        My <span className="gradient">Projects</span>
+      </p>
+      <motion.div
+        className="cards-projects"
+        variants={containerVariants} // Applies stagger to child cards
+      >
         {projectData.map((project) => (
-          <div
+          <motion.div
             key={project.id}
             className="card-pj"
             style={{ backgroundImage: `url(${project.image})` }}
+            variants={cardVariants} // Animates each card
           >
             <div className="overlay">
               <h3 className="project-title">{project.title}</h3>
@@ -34,10 +61,10 @@ const Projects = () => {
                 </svg>
               </a>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

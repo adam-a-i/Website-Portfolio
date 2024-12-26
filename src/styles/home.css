@@ -3,6 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+body.home-page {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #131313;
+  display: flex;
+}
 .home {
   position: relative;
   height: 100vh;

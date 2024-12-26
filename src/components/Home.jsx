@@ -1,10 +1,20 @@
 import React from 'react';
+import { useEffect } from 'react';
 import '../styles/home.css';
 import '../styles/components.css';
 import Particle from './Particle';
 import Typewriter from 'typewriter-effect';
 import Button from './button';
 const Home = () => {
+  useEffect(() => {
+    // Add the class to the body tag
+    document.body.classList.add("home-page");
+
+    // Cleanup: Remove the class when the component unmounts
+    return () => {
+      document.body.classList.remove("home-page");
+    };
+  }, []);
   return (
     <div className="home">
       <Particle style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none' }} />

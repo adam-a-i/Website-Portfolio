@@ -5,6 +5,7 @@ import projectData from "./projectData";
 const Projects = () => {
   return (
     <div className="projects">
+      <p className='edu-title'>My <span className='gradient'>Projects</span></p>
       <div className="cards-projects">
         {projectData.map((project) => (
           <div

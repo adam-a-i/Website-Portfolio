@@ -26,7 +26,7 @@ function App() {
         </Routes>
       </div>
       {!isMobile && (
-        <AnimatedCursor innerSize={10} outerSize={20} color="#0b0ee6" outerAlpha={0.95} innerScale={1} outerScale={1} showSystemCursor={false} innerStyle={{ backgroundColor: "rgba(50, 1, 128, 0.96)" }} outerStyle={{ backgroundColor: "rgba(97, 15, 230, 0.96)", zIndex: 1100 }}
+        <AnimatedCursor innerSize={10} outerSize={20} color="#0b0ee6" outerAlpha={0.95} innerScale={1} outerScale={1} showSystemCursor={false} innerStyle={{ backgroundColor: "rgba(50, 1, 128, 0.96)" , zIndex:1500}} outerStyle={{ backgroundColor: "rgba(97, 15, 230, 0.96)", zIndex: 1100 }}
         />
       )}
     </Router>

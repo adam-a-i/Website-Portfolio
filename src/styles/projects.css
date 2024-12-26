@@ -1,0 +1,77 @@
+.projects{
+    margin-top: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+.cards-projects{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card{
+    position: relative;
+  width: 400px;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.project-title {
+    align-self: flex-start;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.project-description {
+    align-self: flex-start;
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+.github-icon {
+    align-self: flex-start;
+  color: white;
+  margin-top: 10px;
+  font-size: 20px;
+  text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.github-icon:hover {
+  color: #6e13e4;
+}

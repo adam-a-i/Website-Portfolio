@@ -45,7 +45,7 @@ const Experience = () => {
           <br />  
           3. Partial Face Recognition Model - Developing a deep learning model using PyTorch, CNNs, and QAConv to enhance accuracy in occluded conditions.
           </p>
-          <p className="skills">Skills: Deep Learning · Python · Research · PyTorch · </p>
+          <p className="skills">Skills: Deep Learning · Python · Research · PyTorch </p>
         </div>
       </div>
     </div>

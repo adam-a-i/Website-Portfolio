@@ -2,7 +2,7 @@ import React from 'react'
 import '../styles/education.css'
 import '../styles/exp.css'
 import estaieLogo from '../assets/estaie.jpg'
-import UAEULogo from '../assets/UAEU.png'
+import UAEULogo from '../assets/UAEU.webp'
 
 const Experience = () => {
   return (

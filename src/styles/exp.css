@@ -30,7 +30,7 @@
 }
 
 .picture {
-  flex: 1;
+  flex: 0 0 auto;
   height: auto;
 }
 
@@ -96,7 +96,7 @@
   }
 
   .picture {
-    height: 100px;
+    height: 350px;
   }
 
   .workInfo {

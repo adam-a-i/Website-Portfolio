@@ -46,13 +46,13 @@ const Experience = () => {
           <p className="company">estaie</p>
           <p className="timeFrame">(December 2024 - Present)</p>
           <p className="tasks">
-            1. Integrated 4+ lead generation channels (Paid, Organic, Social, Referral) to track 100k+ leads and improve conversion rates.
+            1. Analyzed engagement trends, revealing a 29% landing page drop-off; automated weekly reports to reduce manual work.
             <br />
-            2. Built a lead scoring model, improving lead prioritization by 30% and optimizing resource allocation for the performance team.
+            2. Created an investor dashboard in Google Data Studio, improving campaign efficiency by 15%.
             <br />
-            3. Implemented end-to-end tracking for 10+ key user events, analyzing funnel drop-offs and user behavior with 95% accuracy.
+            3. Developed a random forest model to identify high-quality leads with 87% accuracy, prioritizing 6,500 leads.
             <br />
-            4. Provided demand trend forecasts, contributing to a 15% improvement in dynamic pricing optimization.
+            4. Built ETL pipelines in Python and BigQuery to integrate analytics for real-time updates.
           </p>
           <p className="skills">Skills: Python · Machine Learning · Data Analytics · Optimization</p>
         </div>

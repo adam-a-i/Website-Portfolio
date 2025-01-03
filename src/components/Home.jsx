@@ -67,10 +67,6 @@ const Home = () => {
         </a>
     </div>
     <div className="resume">
-    <Button onClick={() => {
-  console.log('Button clicked');
-  window.open('/assets/AdamCV.pdf', '_blank');
-}} />
 
     </div>
       </div>

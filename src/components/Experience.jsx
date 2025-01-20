@@ -46,13 +46,13 @@ const Experience = () => {
           <p className="company">estaie</p>
           <p className="timeFrame">(December 2024 - Present)</p>
           <p className="tasks">
-            1. Analyzed engagement trends, revealing a 29% landing page drop-off; automated weekly reports to reduce manual work.
+            1. Developed a machine learning model using Random Forest to identify high-quality leads with 87% accuracy, prioritizing resources to convert 6,500 leads. 
             <br />
-            2. Created an investor dashboard in Google Data Studio, improving campaign efficiency by 15%.
+            2. Designed and implemented ETL pipelines using Python and BigQuery to integrate data from GA4, HubSpot, and WhatsApp Analytics, facilitating real-time reporting and insights.
             <br />
-            3. Developed a random forest model to identify high-quality leads with 87% accuracy, prioritizing 6,500 leads.
+            3. Analyzed multi-channel attribution and engagement trends and automated weekly reports, saving 5 hours per week of manual work.
             <br />
-            4. Built ETL pipelines in Python and BigQuery to integrate analytics for real-time updates.
+            4. Created an investor-ready dashboard in Google Data Studio, mapping lead journeys and key metrics, improving campaign efficiency by 15%.
           </p>
           <p className="skills">Skills: Python · Machine Learning · Data Analytics · Optimization</p>
         </div>

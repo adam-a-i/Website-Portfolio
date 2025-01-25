@@ -1,97 +1,166 @@
-  .education{
-    margin-top: 5rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    box-sizing: border-box;
-    flex-direction: column;
-  }
-  .edu-title{
-    margin-bottom: 2rem;
-    font-size: 50px;
-    color: white;
-    font-weight: bolder;
-  }
-  .gradient{
-    background: linear-gradient(45deg, purple, rgb(152, 141, 155));
+.education {
+  padding: 2rem;
+  background: transparent;
+}
+
+.edu-title {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bolder;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.gradient {
+  background: linear-gradient(45deg, purple, rgb(152, 141, 155));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: bold; /* Optional, to make it stand out */
-  }
-  .edu{
-    max-width: 1200px;
-  }
-  .vertical-timeline-element-title{
-    font-size: 20px;
-    font-weight: bolder;
-  }
-  .vertical-timeline-element-subtitle{
-    font-size: 15px;
-    font-weight: bold;
-    color: grey;
-  }
-  .title {
-    font-size: 15px;
-    text-align: center;
-    font-family: "Bebas Neue", sans-serif;
-  }
-  
-  h3 {
-    padding-top: 0.25em;
-  }
-  
-  .vertical-timeline-element-content {
-    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
-      0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
-  }
-  
-  .date {
-    color: rgb(184, 14, 226) !important;
-    font-weight: bold !important;
-  }
-  
-  #description {
-    margin: 1.5em 0 2em 0;
-  }
-  
-  .button {
-    text-decoration: none;
-    padding: 0.5em 1em;
-    border-radius: 5px;
-    color: white;
-  }
-  
-  .workButton {
-    background-color: #06d6a0;
-  }
-  
-  .workButton:hover {
-    background-color: #0ac593;
-  }
-  
-  .schoolButton {
-    background-color: #f9c74f;
-  }
-  
-  .schoolButton:hover {
-    background-color: #f3bc3c;
-  }
-  
-  @media only screen and (max-width: 1700px) {
-    .vertical-timeline-element-date {
-      display: block !important;
-      float: none !important;
-      color: rgb(44, 44, 44);
-      margin-top: 1.5em;
-    }
-  }
+  font-weight: bold;
+}
 
+/* Timeline Styling */
+.vertical-timeline-element-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
 
-  @media screen and (max-width: 490px) {
-    .edu-title{
-        font-size: 30px;
-    }
-    
+.vertical-timeline-element-subtitle {
+  font-size: 1.1rem;
+  color: #f9c74f;
+  margin-bottom: 1rem;
+}
+
+.timeline-content {
+  margin-top: 1.5rem;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+  margin-bottom: 1rem;
+}
+
+.achievement {
+  font-size: 0.95rem;
+  color: #b0b0b0;
+  margin: 0.5rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid #06D6A0;
+}
+
+.gpa {
+  border-left: 3px solid #f9c74f;
+}
+
+/* Date styling */
+.date {
+  color: #fff !important;
+  font-weight: 500 !important;
+  font-size: 1rem !important;
+}
+
+/* Timeline line color */
+.vertical-timeline::before {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1170px) {
+  .education {
+    padding: 1rem;
   }
+  
+  .edu-title {
+    font-size: 2rem;
+  }
+  
+  .vertical-timeline-element-title {
+    font-size: 1.3rem;
+  }
+  
+  .vertical-timeline-element-subtitle {
+    font-size: 1rem;
+  }
+}
+
+/* Animation for timeline elements */
+.vertical-timeline-element {
+  transition: transform 0.3s ease;
+}
+
+.vertical-timeline-element:hover {
+  transform: translateY(-5px);
+}
+
+/* Glass morphism effect for timeline elements */
+.vertical-timeline-element-content {
+  transition: all 0.3s ease;
+}
+
+.vertical-timeline-element-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
+}
+
+.edu{
+  max-width: 1200px;
+}
+
+.title {
+  font-size: 15px;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+h3 {
+  padding-top: 0.25em;
+}
+
+.vertical-timeline-element-content {
+  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
+    0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
+}
+
+.button {
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  color: white;
+}
+
+.workButton {
+  background-color: #06d6a0;
+}
+
+.workButton:hover {
+  background-color: #0ac593;
+}
+
+.schoolButton {
+  background-color: #f9c74f;
+}
+
+.schoolButton:hover {
+  background-color: #f3bc3c;
+}
+
+@media only screen and (max-width: 1700px) {
+  .vertical-timeline-element-date {
+    display: block !important;
+    float: none !important;
+    color: rgb(44, 44, 44);
+    margin-top: 1.5em;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .edu-title{
+      font-size: 30px;
+  }
+  
+}

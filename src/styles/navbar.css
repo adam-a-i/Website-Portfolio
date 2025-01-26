@@ -4,6 +4,7 @@
     left: 0;
     width: 100%;
     background-color: #2c2c2c;
+    backdrop-filter: blur(10px); /* Blur effect */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -11,7 +12,17 @@
     z-index: 10; 
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
     overflow: visible;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    transform: translateY(-100%);
+    animation: slideDown 0.5s forwards;
 }
+
+@keyframes slideDown {
+    to {
+        transform: translateY(0);
+    }
+}
+
 .switch {
     margin-left: auto;
     right: 0px;

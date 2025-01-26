@@ -2,7 +2,7 @@ import FadeInSection from "./FadeInView";
 import { motion } from "framer-motion";
 import { FaPython, FaJava, FaReact, FaNodeJs, FaAws } from "react-icons/fa";
 import { DiMongodb, DiMysql } from "react-icons/di";
-import { SiFirebase, SiExpress, SiJavascript, SiOpencv, SiGit } from "react-icons/si";
+import { SiFirebase, SiExpress, SiJavascript, SiOpencv, SiGit, SiFlask } from "react-icons/si";
 
 export const iconSize = 25;
 
@@ -78,6 +78,18 @@ export const skills = [
     color: "255, 85, 0", // Orange
     icon: <SiGit size={iconSize} color="#FF5500" />,
     description: "Version Control",
+  },
+  {
+    label: "React Native",
+    color: "0, 0, 0", // Black
+    icon: <FaReact size={iconSize} color="#61DAFB" />,
+    description: "Mobile Framework",
+  },
+  {
+    label: "Flask",
+    color: "0, 0, 0", // Black
+    icon: <SiFlask size={iconSize} color="#000000" />,
+    description: "Python Framework",
   },
 ];
 

@@ -5,6 +5,8 @@ import '../styles/components.css';
 import Particle from './Particle';
 import Typewriter from 'typewriter-effect';
 import Button from './button';
+import { motion } from 'framer-motion';
+
 const Home = () => {
   useEffect(() => {
     // Add the class to the body tag
@@ -15,8 +17,14 @@ const Home = () => {
       document.body.classList.remove("home-page");
     };
   }, []);
+
   return (
-    <div className="home">
+    <motion.div
+      className="home"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       <Particle style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none' }} />
       <div className="info">
         <div className="hi">
@@ -67,10 +75,10 @@ const Home = () => {
         </a>
     </div>
     <div className="resume">
-
+      {/* <Button /> */}
     </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

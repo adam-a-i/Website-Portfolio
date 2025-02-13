@@ -6,6 +6,7 @@ import Particle from './Particle';
 import Typewriter from 'typewriter-effect';
 import Button from './button';
 import { motion } from 'framer-motion';
+import profilePic from '../assets/Adam Picture.jpg';
 
 const Home = () => {
   useEffect(() => {
@@ -29,6 +30,9 @@ const Home = () => {
       <div className="info">
         <div className="hi">
           <p className='name'>Hi</p><span className="wave">👋</span><p className='name'>I'm</p><p className="name">Adam Ibrahim</p>
+          <div className="profile-pic-container">
+            <img src={profilePic} alt="Adam Ibrahim" className="profile-pic" />
+          </div>
           <div className='typewriter'>
             <p className='into'>I am into </p>
             <Typewriter

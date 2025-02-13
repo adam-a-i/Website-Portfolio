@@ -194,4 +194,32 @@ a.socialicon {
   margin-top: 50px;
 }
 
+.profile-pic-container {
+  width: 250px;
+  height: 250px;
+  margin: 15px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.profile-pic-container:hover {
+  transform: scale(1.05);
+}
+
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.profile-pic:hover {
+  transform: scale(1.1);
+}
+
 

@@ -46,7 +46,7 @@ const Experience = () => {
           <p className="company">estaie</p>
           <p className="timeFrame">(December 2024 - Present)</p>
           <p className="tasks">
-          • Developed a machine learning model using Random Forest to identify high-quality leads with 87% accuracy, prioritizing resources to convert 6,500 leads. 
+          • Developed a machine learning model using Random Forest to identify high-quality leads with 87% accuracy, prioritizing resources to convert 300+ leads. 
             <br />
           • Designed and implemented ETL pipelines using Python and BigQuery to integrate data from GA4, HubSpot, and WhatsApp Analytics, facilitating real-time reporting and insights.
             <br />

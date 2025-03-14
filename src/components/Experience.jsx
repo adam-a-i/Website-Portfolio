@@ -4,6 +4,7 @@ import "../styles/education.css";
 import "../styles/exp.css";
 import estaieLogo from "../assets/estaie.jpg";
 import UAEULogo from "../assets/UAEU.webp";
+import AICLogo from "../assets/JoyBox.png";
 
 const Experience = () => {
   const containerVariants = {
@@ -29,14 +30,14 @@ const Experience = () => {
       variants={containerVariants}
     >
       <motion.div>
-      <p className="edu-title">
-        Work <span className="gradient">Experience</span>
-      </p>
+        <p className="edu-title">
+          Work <span className="gradient">Experience</span>
+        </p>
       </motion.div>
 
       <motion.div
         className="card"
-        variants={cardVariants} // Animates each card
+        variants={cardVariants}
       >
         <div className="picture">
           <img className="work-logo" src={estaieLogo} alt="estaie logo" />
@@ -60,7 +61,7 @@ const Experience = () => {
 
       <motion.div
         className="card"
-        variants={cardVariants} // Animates each card
+        variants={cardVariants}
       >
         <div className="picture">
           <img className="work-logo-UAEU" src={UAEULogo} alt="UAEU logo" />
@@ -77,6 +78,33 @@ const Experience = () => {
           • Partial Face Recognition Model - Developing a deep learning model using PyTorch, CNNs, and QAConv to enhance accuracy in occluded conditions.
           </p>
           <p className="skills">Skills: Deep Learning · Python · Research · PyTorch </p>
+        </div>
+      </motion.div>
+
+      <motion.div>
+        <p className="edu-title">
+          Hackathon <span className="gradient">Participation</span>
+        </p>
+      </motion.div>
+
+      <motion.div
+        className="card hackathon-card"
+        variants={cardVariants}
+      >
+        <div className="picture">
+          <img className="work-logo" src={AICLogo} alt="AIC Competition logo" />
+        </div>
+        <div className="workInfo">
+          <p className="position">1st place🎉 - AIC-1 (ICMTC)</p>
+          <p className="company">Competitor</p>
+          <p className="tasks">
+            Developed an Arabic abstractive summarization model and dataset. Introduced a cheap way to label summarization datasets in Arabic NLP through prompt engineering. The first Arabic abstractive summarization dataset to be labelled by an LLM. -Publishing works in progress-
+          </p>
+          <div className="hackathon-links">
+            <a href="#" className="project-link">
+              <span>Learn More</span>
+            </a>
+          </div>
         </div>
       </motion.div>
     </motion.div>

@@ -1,44 +1,56 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import "../styles/education.css";
 import "../styles/exp.css";
 import estaieLogo from "../assets/estaie.jpg";
 import UAEULogo from "../assets/UAEU.webp";
-import AICLogo from "../assets/JoyBox.png";
+import slushd from "../assets/nyuWin.jpeg";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+
+const hackathonWins = [
+  {
+    id: 1,
+    title: "1st place 🥇 - AI for Good Hackathon at NYUAD Slush'D",
+    company: "NYUAD Slush'D & Nokia",
+    image: slushd,
+    description: "Built with a team of 3 to develop Socia, an AI-powered public speaking training platform. Built real-time speech analysis, immersive practice environments, and multilingual support. Won 1st place among 104 teams in the biggest hackathon in the UAE of 2025.",
+    skills: "AI · Speech Analysis · React Native · Mobile Development",
+    learnMoreLink: "#"
+  },
+  {
+    id: 2,
+    title: "1st place 🥇 - Digital Transformation Hackathon",
+    company: "Zayed University",
+    image: slushd,
+    description: "Developed F.A.L.C.O.N (Flood Alert and Level Control Observational Network) to help Civil Defense prioritize resources during floods. Integrated satellite imagery, ML models, and LLMs for real-time flood analysis.",
+    skills: "React · Machine Learning · Satellite Imagery · GIS",
+    learnMoreLink: "#"
+  }
+];
 
 const Experience = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
+  const [currentHackathon, setCurrentHackathon] = useState(0);
+
+  const nextHackathon = () => {
+    setCurrentHackathon((prev) => (prev + 1) % hackathonWins.length);
   };
 
-  const cardVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
+  const prevHackathon = () => {
+    setCurrentHackathon((prev) => (prev - 1 + hackathonWins.length) % hackathonWins.length);
   };
 
   return (
-    <motion.div
-      className="experience"
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants}
-    >
-      <motion.div>
-        <p className="edu-title">
-          Work <span className="gradient">Experience</span>
-        </p>
-      </motion.div>
-
-      <motion.div
-        className="card"
-        variants={cardVariants}
+    <div className="experience">
+      <motion.h1 
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="edu-title"
       >
+        Work <span className="gradient">Experience</span>
+      </motion.h1>
+
+      <motion.div className="card">
         <div className="picture">
           <img className="work-logo" src={estaieLogo} alt="estaie logo" />
         </div>
@@ -59,10 +71,7 @@ const Experience = () => {
         </div>
       </motion.div>
 
-      <motion.div
-        className="card"
-        variants={cardVariants}
-      >
+      <motion.div className="card">
         <div className="picture">
           <img className="work-logo-UAEU" src={UAEULogo} alt="UAEU logo" />
         </div>
@@ -81,33 +90,53 @@ const Experience = () => {
         </div>
       </motion.div>
 
-      <motion.div>
-        <p className="edu-title">
-          Hackathon <span className="gradient">Participation</span>
-        </p>
-      </motion.div>
-
-      <motion.div
-        className="card hackathon-card"
-        variants={cardVariants}
+      <motion.h1 
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="edu-title"
       >
-        <div className="picture">
-          <img className="work-logo" src={AICLogo} alt="AIC Competition logo" />
+        Hackathon <span className="gradient">Wins</span>
+      </motion.h1>
+
+      <div className="hackathon-section">
+        <div className="hackathon-slider">
+          <button className="slider-button prev" onClick={prevHackathon}>
+            <FaArrowLeft />
+          </button>
+          <button className="slider-button next" onClick={nextHackathon}>
+            <FaArrowRight />
+          </button>
+          
+          <AnimatePresence initial={false} custom={currentHackathon}>
+            <motion.div
+              key={currentHackathon}
+              custom={currentHackathon}
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -100 }}
+              transition={{ duration: 0.5 }}
+              className="card hackathon-card"
+            >
+              <div className="picture">
+                <img className="work-logo" src={hackathonWins[currentHackathon].image} alt="Hackathon" />
+              </div>
+              <div className="workInfo">
+                <p className="position">{hackathonWins[currentHackathon].title}</p>
+                <p className="company">{hackathonWins[currentHackathon].company}</p>
+                <p className="tasks">{hackathonWins[currentHackathon].description}</p>
+                <p className="skills">Skills: {hackathonWins[currentHackathon].skills}</p>
+                <div className="hackathon-links">
+                  <a href={hackathonWins[currentHackathon].learnMoreLink} className="project-link">
+                    <span>Learn More</span>
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
         </div>
-        <div className="workInfo">
-          <p className="position">1st place🎉 - AIC-1 (ICMTC)</p>
-          <p className="company">Competitor</p>
-          <p className="tasks">
-            Developed an Arabic abstractive summarization model and dataset. Introduced a cheap way to label summarization datasets in Arabic NLP through prompt engineering. The first Arabic abstractive summarization dataset to be labelled by an LLM. -Publishing works in progress-
-          </p>
-          <div className="hackathon-links">
-            <a href="#" className="project-link">
-              <span>Learn More</span>
-            </a>
-          </div>
-        </div>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 };
 

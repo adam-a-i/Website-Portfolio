@@ -61,18 +61,42 @@
 }
 
 .hackathon-card {
-  background: rgba(18, 18, 18, 0.95);
+  background: rgba(0, 0, 0, 0.95);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  backdrop-filter: blur(10px);
+}
+
+.hackathon-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #6e13e4, #a855f7, #6e13e4);
+  z-index: -1;
+  border-radius: 17px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .hackathon-card:hover {
-  border-color: rgba(110, 19, 228, 0.5);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(110, 19, 228, 0.2);
+}
+
+.hackathon-card:hover::before {
+  opacity: 1;
 }
 
 .hackathon-links {
   display: flex;
-  gap: 1rem;
-  margin-top: 1.5rem;
+  gap: 1.5rem;
+  margin-top: auto;
 }
 
 .hackathon-links .project-link {
@@ -231,5 +255,123 @@
   .skills {
     font-size: 0.85rem;
   }
+}
+
+.hackathon-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(110, 19, 228, 0.1);
+  border: 1px solid rgba(110, 19, 228, 0.2);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.slider-button:hover {
+  background: rgba(110, 19, 228, 0.2);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.slider-button.prev {
+  left: 20px;
+}
+
+.slider-button.next {
+  right: 20px;
+}
+
+.slider-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .slider-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .slider-button.prev {
+    left: 10px;
+  }
+
+  .slider-button.next {
+    right: 10px;
+  }
+
+  .slider-button svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.hackathon-section {
+  margin: 4rem 0;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  background: rgba(110, 19, 228, 0.1);
+  border: 1px solid rgba(110, 19, 228, 0.2);
+  border-radius: 20px;
+  color: white;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  background: rgba(110, 19, 228, 0.2);
+  transform: scale(1.05);
+}
+
+.skills {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.card h3 {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.card h4 {
+  font-size: 1.2rem;
+  color: #6e13e4;
+  margin-bottom: 1.5rem;
+}
+
+.card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.5rem;
 }
 

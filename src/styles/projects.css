@@ -1,13 +1,13 @@
 .projects{
-    margin-top: 5rem;
-    width: 100%;
+    margin: 0;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2rem;
     box-sizing: border-box;
     flex-direction: column;
-    background: #0a0a0a;
+    background: #000000;
     min-height: 100vh;
     position: relative;
     overflow: hidden;
@@ -30,17 +30,16 @@
 
 .cards-projects{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(2, 550px);
     gap: 2.5rem;
-    max-width: 1400px;
     width: 100%;
-    margin: 0 auto;
-    padding: 1rem;
-    perspective: 1000px;
+    margin: 0;
+    padding: 2rem;
+    place-content: center;
 }
 
 .project-card {
-    background: rgba(18, 18, 18, 0.95);
+    background: rgba(0, 0, 0, 0.95);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     overflow: hidden;
@@ -97,7 +96,7 @@
     height: calc(100% - 200px);
     padding: 1.5rem;
     position: relative;
-    background: linear-gradient(180deg, rgba(18, 18, 18, 0.95) 0%, rgba(18, 18, 18, 0.98) 100%);
+    background: #000000;
 }
 
 .project-title {

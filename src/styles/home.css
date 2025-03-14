@@ -3,13 +3,35 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000000;
+  overflow-x: hidden;
+}
+
 body.home-page {
   margin: 0;
+  padding: 0;
   min-width: 320px;
   min-height: 100vh;
   background-color: #000000;
   display: flex;
+  width: 100%;
+  overflow-x: hidden;
 }
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
 .home {
   position: relative;
   height: 100vh;
@@ -18,7 +40,9 @@ body.home-page {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background: linear-gradient(135deg, #141416 0%, #1d283b 100%); /* Gradient background */
+  background: #000000; /* Changed to solid black */
+  margin: 0;
+  padding: 0;
 }
 
 .info {

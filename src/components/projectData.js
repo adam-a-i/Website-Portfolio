@@ -10,6 +10,7 @@ const projectsData = [
       description:
         "AI-powered quiz generator that creates personalized quizzes and recommends topics to review with tailored YouTube video suggestions!",
       image: AIExamify,
+      demoLink: "https://aiexamify.demo.com",
       githubLink: "https://github.com/adam-a-i/aiexamify",
     },
     {
@@ -18,6 +19,7 @@ const projectsData = [
       description:
         "A platform for creating and sharing personalized gift wish lists. Users get unique links, and friends can reserve gifts to avoid duplicates!",
       image: JoyBox,
+      demoLink: "https://joybox.demo.com",
       githubLink: "https://github.com/adam-a-i/JoyBox",
     },
     // Add more projects as needed

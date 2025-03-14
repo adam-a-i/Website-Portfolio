@@ -1,23 +1,81 @@
 .education {
+  margin: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 2rem;
-  background: transparent;
+  box-sizing: border-box;
+  flex-direction: column;
+  background: #000000;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Enhanced purple glow effects */
+.education::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: 
+      radial-gradient(circle at 20% 20%, rgba(110, 19, 228, 0.15) 0%, transparent 40%),
+      radial-gradient(circle at 80% 80%, rgba(168, 85, 247, 0.15) 0%, transparent 40%),
+      radial-gradient(circle at center, rgba(110, 19, 228, 0.1) 0%, transparent 50%);
+  animation: rotate 20s linear infinite;
+  pointer-events: none;
+  top: -50%;
+  left: -50%;
+}
+
+.education::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+      radial-gradient(circle at 80% 20%, rgba(110, 19, 228, 0.15) 0%, transparent 35%),
+      radial-gradient(circle at 20% 80%, rgba(168, 85, 247, 0.15) 0%, transparent 35%);
+  animation: pulse 8s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+.edu {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .edu-title {
-  margin-top: 60px;
+  margin: 0 0 2rem 0;
   text-align: center;
-  font-size: 50px;
-  font-weight: bolder;
-  margin-bottom: 2rem;
-  letter-spacing: 1px;
+  font-size: 3rem;
+  font-weight: bold;
   color: white;
+  position: relative;
+  z-index: 1;
 }
 
 .gradient {
-  background: linear-gradient(45deg, purple, rgb(152, 141, 155));
+  background: linear-gradient(45deg, #6e13e4, #a855f7);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: bold;
+  position: relative;
+}
+
+.gradient::after {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  left: -10%;
+  top: -10%;
+  background: radial-gradient(circle at center, rgba(110, 19, 228, 0.2) 0%, transparent 70%);
+  filter: blur(10px);
+  z-index: -1;
+  animation: pulse 3s ease-in-out infinite;
 }
 
 /* Timeline Styling */
@@ -69,6 +127,42 @@
   background: rgba(255, 255, 255, 0.1) !important;
 }
 
+/* Glass morphism effect for timeline elements */
+.vertical-timeline-element-content {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 15px !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.vertical-timeline-element-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
+  border-color: rgba(110, 19, 228, 0.3) !important;
+}
+
+.vertical-timeline-element-content-arrow {
+  border-right: 7px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { 
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
 /* Responsive adjustments */
 @media screen and (max-width: 1170px) {
   .education {
@@ -88,79 +182,8 @@
   }
 }
 
-/* Animation for timeline elements */
-.vertical-timeline-element {
-  transition: transform 0.3s ease;
-}
-
-.vertical-timeline-element:hover {
-  transform: translateY(-5px);
-}
-
-/* Glass morphism effect for timeline elements */
-.vertical-timeline-element-content {
-  transition: all 0.3s ease;
-}
-
-.vertical-timeline-element-content:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
-}
-
-.edu{
-  max-width: 1200px;
-}
-
-.title {
-  font-size: 15px;
-  text-align: center;
-  font-family: "Bebas Neue", sans-serif;
-}
-
-h3 {
-  padding-top: 0.25em;
-}
-
-.vertical-timeline-element-content {
-  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
-    0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
-}
-
-.button {
-  text-decoration: none;
-  padding: 0.5em 1em;
-  border-radius: 5px;
-  color: white;
-}
-
-.workButton {
-  background-color: #06d6a0;
-}
-
-.workButton:hover {
-  background-color: #0ac593;
-}
-
-.schoolButton {
-  background-color: #f9c74f;
-}
-
-.schoolButton:hover {
-  background-color: #f3bc3c;
-}
-
-@media only screen and (max-width: 1700px) {
-  .vertical-timeline-element-date {
-    display: block !important;
-    float: none !important;
-    color: rgb(44, 44, 44);
-    margin-top: 1.5em;
-  }
-}
-
 @media screen and (max-width: 490px) {
-  .edu-title{
-      font-size: 30px;
+  .edu-title {
+    font-size: 2rem;
   }
-  
 }

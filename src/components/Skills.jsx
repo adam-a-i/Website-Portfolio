@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FaPython, FaJava, FaReact, FaNodeJs, FaAws } from "react-icons/fa";
 import { DiMongodb, DiMysql } from "react-icons/di";
 import { SiFirebase, SiExpress, SiJavascript, SiOpencv, SiGit, SiFlask } from "react-icons/si";
+import "../styles/skills.css";
 
 export const iconSize = 25;
 
@@ -95,56 +96,76 @@ export const skills = [
 
 export default function Skills() {
   return (
-    <FadeInSection>
-      <div className="mt-20 w-full flex justify-center items-center p-8 box-border flex-col">
-        <section id="skills" className="mb-6 w-full">
-        <p className="edu-title mx-auto text-center">
-            My <span className="gradient">Skills</span>
-          </p>
-
-          <motion.div
-            className="grid grid-cols-2 md:grid-cols-4 gap-4"
-            variants={{
-              hidden: { opacity: 0 },
-              visible: {
-                opacity: 1,
-                transition: {
-                  staggerChildren: 0.1,
-                },
+    <div className="skills-container">
+      <motion.h1 
+        className="edu-title"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        My <span className="gradient">Skills</span>
+      </motion.h1>
+      
+      <motion.div
+        className="skills-grid"
+        variants={{
+          hidden: { opacity: 0 },
+          visible: {
+            opacity: 1,
+            transition: {
+              staggerChildren: 0.1,
+            },
+          },
+        }}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.div
+          className="grid grid-cols-2 md:grid-cols-4 gap-4"
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.1,
               },
-            }}
-            initial="hidden"
-            animate="visible"
-          >
-            {skills.map((skill, index) => (
-              <motion.div
-                key={index}
-                className="flex items-center p-3 border bg-gray-800 rounded-md shadow-md"
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0 },
-                }}
+            },
+          }}
+        >
+          {skills.map((skill, index) => (
+            <motion.div
+              key={index}
+              className="flex items-center p-3 border bg-gray-800 rounded-md shadow-md"
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              whileHover={{
+                scale: 1.05,
+                transition: { duration: 0.2 }
+              }}
+              style={{
+                height: "80px",
+                border: "1px solid rgba(255, 255, 255, 0.1)",
+                backdropFilter: "blur(10px)",
+              }}
+            >
+              <div
+                className="flex items-center justify-center w-10 h-10 rounded-md"
                 style={{
-                  height: "80px", // Reduced card height
+                  backgroundColor: `rgba(${skill.color}, 0.2)`,
                 }}
               >
-                <div
-                  className="flex items-center justify-center w-10 h-10 rounded-md"
-                  style={{
-                    backgroundColor: `rgba(${skill.color}, 0.2)`,
-                  }}
-                >
-                  {skill.icon}
-                </div>
-                <div className="ml-3">
-                  <h3 className="text-sm font-bold text-white">{skill.label}</h3>
-                  <p className="text-xs text-gray-400">{skill.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </section>
-      </div>
-    </FadeInSection>
+                {skill.icon}
+              </div>
+              <div className="ml-3">
+                <h3 className="text-sm font-bold text-white">{skill.label}</h3>
+                <p className="text-xs text-gray-400">{skill.description}</p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </motion.div>
+    </div>
   );
 }

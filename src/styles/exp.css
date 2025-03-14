@@ -61,36 +61,19 @@
 }
 
 .hackathon-card {
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(40, 40, 41, 0.95);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   overflow: hidden;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   backdrop-filter: blur(10px);
-}
-
-.hackathon-card::before {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(45deg, #6e13e4, #a855f7, #6e13e4);
-  z-index: -1;
-  border-radius: 17px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  margin: 0 auto;
 }
 
 .hackathon-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 10px 30px rgba(110, 19, 228, 0.2);
-}
-
-.hackathon-card:hover::before {
-  opacity: 1;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .hackathon-links {
@@ -260,69 +243,42 @@
 .hackathon-slider {
   position: relative;
   width: 100%;
-  overflow: hidden;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.slider-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: rgba(110, 19, 228, 0.1);
-  border: 1px solid rgba(110, 19, 228, 0.2);
-  color: white;
-  cursor: pointer;
+.slider-dots {
   display: flex;
-  align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  position: relative;
   z-index: 10;
 }
 
-.slider-button:hover {
-  background: rgba(110, 19, 228, 0.2);
-  transform: translateY(-50%) scale(1.1);
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 
-.slider-button.prev {
-  left: 20px;
+.dot.active {
+  background: #6e13e4;
+  transform: scale(1.2);
 }
 
-.slider-button.next {
-  right: 20px;
-}
-
-.slider-button svg {
-  width: 20px;
-  height: 20px;
-}
-
-@media screen and (max-width: 768px) {
-  .slider-button {
-    width: 40px;
-    height: 40px;
-  }
-
-  .slider-button.prev {
-    left: 10px;
-  }
-
-  .slider-button.next {
-    right: 10px;
-  }
-
-  .slider-button svg {
-    width: 16px;
-    height: 16px;
-  }
+.dot:hover {
+  background: rgba(110, 19, 228, 0.5);
 }
 
 .hackathon-section {
   margin: 4rem 0;
   width: 100%;
   max-width: 1100px;
+  overflow: hidden;
 }
 
 .section-title {

@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "../styles/education.css";
 import "../styles/exp.css";
 import estaieLogo from "../assets/estaie.jpg";
 import UAEULogo from "../assets/UAEU.webp";
 import slushd from "../assets/nyuWin.jpeg";
+import zu from "../assets/zuWin.jpeg";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const hackathonWins = [
@@ -21,7 +22,7 @@ const hackathonWins = [
     id: 2,
     title: "1st place 🥇 - Digital Transformation Hackathon",
     company: "Zayed University",
-    image: slushd,
+    image: zu,
     description: "Developed F.A.L.C.O.N (Flood Alert and Level Control Observational Network) to help Civil Defense prioritize resources during floods. Integrated satellite imagery, ML models, and LLMs for real-time flood analysis.",
     skills: "React · Machine Learning · Satellite Imagery · GIS",
     learnMoreLink: "#"
@@ -31,13 +32,20 @@ const hackathonWins = [
 const Experience = () => {
   const [currentHackathon, setCurrentHackathon] = useState(0);
 
-  const nextHackathon = () => {
-    setCurrentHackathon((prev) => (prev + 1) % hackathonWins.length);
+  const handleKeyDown = (e) => {
+    if (e.key === 'ArrowLeft') {
+      setCurrentHackathon((prev) => (prev - 1 + hackathonWins.length) % hackathonWins.length);
+    } else if (e.key === 'ArrowRight') {
+      setCurrentHackathon((prev) => (prev + 1) % hackathonWins.length);
+    }
   };
 
-  const prevHackathon = () => {
-    setCurrentHackathon((prev) => (prev - 1 + hackathonWins.length) % hackathonWins.length);
-  };
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
 
   return (
     <div className="experience">
@@ -101,21 +109,13 @@ const Experience = () => {
 
       <div className="hackathon-section">
         <div className="hackathon-slider">
-          <button className="slider-button prev" onClick={prevHackathon}>
-            <FaArrowLeft />
-          </button>
-          <button className="slider-button next" onClick={nextHackathon}>
-            <FaArrowRight />
-          </button>
-          
-          <AnimatePresence initial={false} custom={currentHackathon}>
+          <AnimatePresence mode="wait">
             <motion.div
               key={currentHackathon}
-              custom={currentHackathon}
-              initial={{ opacity: 0, x: 100 }}
+              initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -100 }}
-              transition={{ duration: 0.5 }}
+              exit={{ opacity: 0, x: -20 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
               className="card hackathon-card"
             >
               <div className="picture">
@@ -134,6 +134,16 @@ const Experience = () => {
               </div>
             </motion.div>
           </AnimatePresence>
+
+          <div className="slider-dots">
+            {hackathonWins.map((_, index) => (
+              <div
+                key={index}
+                className={`dot ${index === currentHackathon ? 'active' : ''}`}
+                onClick={() => setCurrentHackathon(index)}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>

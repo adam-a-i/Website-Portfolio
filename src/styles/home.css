@@ -9,7 +9,7 @@ html, body {
   padding: 0;
   width: 100%;
   min-height: 100vh;
-  background-color: #000000;
+  background: linear-gradient(to bottom right, #000000, #0a192f);
   overflow-x: hidden;
 }
 
@@ -18,7 +18,7 @@ body.home-page {
   padding: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #000000;
+  background: linear-gradient(to bottom right, #000000, #0a192f);
   display: flex;
   width: 100%;
   overflow-x: hidden;
@@ -27,7 +27,7 @@ body.home-page {
 #root {
   width: 100%;
   min-height: 100vh;
-  background-color: #000000;
+  background: linear-gradient(to bottom right, #000000, #0a192f);
   margin: 0;
   padding: 0;
 }
@@ -40,7 +40,7 @@ body.home-page {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background: #000000; /* Changed to solid black */
+  background: linear-gradient(to bottom right, #000000, #0a192f);
   margin: 0;
   padding: 0;
 }

@@ -6,7 +6,6 @@ import estaieLogo from "../assets/estaie.jpg";
 import UAEULogo from "../assets/UAEU.webp";
 import slushd from "../assets/nyuWin.jpeg";
 import zu from "../assets/zuWin.jpeg";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const hackathonWins = [
   {
